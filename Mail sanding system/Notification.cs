@@ -29,8 +29,8 @@ namespace Mail_sanding_system
             var v = new MailMessage(from, too);
             
                 v.Subject = subject;
-            v.Body = body;
-            smtp.Send(v);   
+                v.Body = body;
+                smtp.Send(v);   
         }
     }
 }
