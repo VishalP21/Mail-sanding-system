@@ -2,7 +2,12 @@
 
 Notification notification=new Notification();
 
-for (int i = 0; i < 3; i++)
-{
-    notification.sandemailNotification("vishalp951295@gmail.com", "jamvanu thi gau 6", "vela te pela navi sysytem 6");
-}
+    notification.sandemailNotification("vishalp951295@gmail.com", "Hii", "Hello");
+
+
+List<string> massage = new List<string>();
+
+massage.Add("ghjhj@gmail.com");
+massage.Add("werwert@gmail.com");
+
+notification.sandemailNotification(massage, "fghj", "ertfgyhui");

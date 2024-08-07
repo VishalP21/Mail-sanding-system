@@ -32,5 +32,31 @@ namespace Mail_sanding_system
                 v.Body = body;
                 smtp.Send(v);   
         }
+
+        public void sandemailNotification(List<string> too0, string subject, string body)
+        {
+            var d = "";
+            foreach (string s in too0)
+            {
+                d += "," + s;
+            }
+            var from = new MailAddress("vishalp951295@gmail.com");
+            var password = "aoll ijcd ityg matl";
+            var smtp = new SmtpClient
+            {
+                Host = "smtp.gmail.com",
+                Port = 587,
+                EnableSsl = true,
+                DeliveryMethod = SmtpDeliveryMethod.Network,
+                Credentials = new NetworkCredential(from.Address, password)
+
+            };
+
+            var v1 = new MailMessage("vishalp951295@gmail.com", d);
+
+            v1.Subject = subject;
+            v1.Body = body;
+            smtp.Send(v1);
+        }
     }
 }
